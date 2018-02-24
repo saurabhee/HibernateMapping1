@@ -1,0 +1,64 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE hibernate-configuration SYSTEM 
+"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+   <session-factory>
+   
+      <property name = "hibernate.dialect">
+         org.hibernate.dialect.HSQLDialect
+      </property>
+      
+      <property name = "hibernate.connection.driver_class">
+         org.hsqldb.jdbc.JDBCDriver
+      </property>
+      
+      <!-- Assume test is the database name -->
+      
+      <property name = "hibernate.connection.url">
+         jdbc:hsqldb:hsql://localhost/
+      </property>
+      
+      <property name = "hibernate.connection.username">
+         SA
+      </property>
+      
+       <property name = "hibernate.hbm2ddl.auto">create</property>
+       <property name = "show sql">true </property>
+       
+        <property name="hibernate.current_session_context_class">thread</property>     
+      
+      <!-- Annotation mapping class -->
+		<!-- <mapping class="com.scp.onetooneunidirectional.Student"/>
+		<mapping class="com.scp.onetooneunidirectional.Address"/> -->
+		
+		<!-- <mapping class="com.scp.onetomany.Address1"/>
+		<mapping class="com.scp.onetomany.Student1"/> -->
+		
+        <!-- <mapping class="com.scp.onetoonebidirect.Employee"/>
+		<mapping class="com.scp.onetoonebidirect.Address"/>
+       -->
+      
+      
+     <!--   <mapping class="com.scp.manytomany.Student10"/>
+	   <mapping class="com.scp.manytomany.Subject"/> -->
+      
+      <!--  <mapping class="com.scp.manytomany.Student11"/>
+	   <mapping class="com.scp.manytomany.Subject2"/> -->
+	   
+	  <!--  <mapping class="com.scp.inheritance.Parent"/>
+	   <mapping class="com.scp.inheritance.Child1"/>
+       <mapping class="com.scp.inheritance.Child2"/> -->
+      
+       <!-- <mapping class="com.scp.inheritance.Parent1"/>
+	   <mapping class="com.scp.inheritance.Child11"/>
+       <mapping class="com.scp.inheritance.Child22"/> -->
+       
+       <mapping class="com.scp.inheritance.Parent2"/>
+	   <mapping class="com.scp.inheritance.Child111"/>
+       <mapping class="com.scp.inheritance.Child222"/>
+      
+      
+      
+      
+   </session-factory>
+</hibernate-configuration>
